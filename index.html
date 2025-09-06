@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- Minimal, single‑file personal site for Abderahmane ZENTOUT
+       Purpose: simple landing page + blog while applying for PhD (SLAM)
+       How to use: save as index.html in your yourusername.github.io repo.
+       TODOs are marked below so you can search/replace quickly. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Abderahmane ZENTOUT — SLAM Enthusiast</title>
+  <meta name="description" content="Abderahmane ZENTOUT — aspiring PhD student interested in SLAM and computer vision. Blogging and projects.">
+  <link rel="icon" href="favicon.ico">
+  <style>
+    :root{--bg:#0b0e14;--text:#e6e8ee;--muted:#a9b1c3;--card:#111625;--border:#1f2637;--link:#7aa2f7;--accent:#33d6a6}
+    @media (prefers-color-scheme: light){:root{--bg:#f7f8fb;--text:#0f172a;--muted:#475569;--card:#ffffff;--border:#e2e8f0;--link:#1d4ed8;--accent:#059669}}
+    *{box-sizing:border-box}body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,sans-serif;background:var(--bg);color:var(--text)}
+    a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+    .container{max-width:880px;margin:0 auto;padding:20px}
+    header{position:sticky;top:0;background:rgba(17,22,37,.7);backdrop-filter:blur(8px);border-bottom:1px solid var(--border);z-index:10}
+    @media (prefers-color-scheme: light){header{background:rgba(255,255,255,.75)}}
+    nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700}
+    .nav-links{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:8px 12px;border:1px solid var(--border);border-radius:10px;background:var(--card)}
+    .btn.primary{background:linear-gradient(135deg,var(--accent),#60a5fa);border:none;color:#052e2b}
+    .hero{display:grid;gap:18px;grid-template-columns:1fr 140px;align-items:center;padding:26px 0}
+    .hero img{width:120px;height:120px;border-radius:50%;border:2px solid var(--border);object-fit:cover;justify-self:end}
+    @media (max-width:720px){.hero{grid-template-columns:1fr}.hero img{justify-self:start}}
+    h1{font-size:clamp(26px,4vw,36px);margin:6px 0}
+    h2{font-size:20px;margin:0 0 10px}
+    section{padding:22px 0;border-top:1px solid var(--border)}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    .muted{color:var(--muted)}
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:4px 8px;border:1px solid var(--border);border-radius:999px;color:var(--muted)}
+    .list{display:grid;gap:12px}
+    footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted)}
+  </style>
+</head>
+<body>
+  <a class="visually-hidden" href="#main">Skip to content</a>
+  <header>
+    <div class="container">
+      <nav>
+        <div class="brand">Abderahmane ZENTOUT</div>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#blog">Blog</a>
+          <a class="btn" href="/assets/CV.pdf">CV</a>
+          <a class="btn primary" href="#contact">Contact</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <div>
+        <div class="tag" style="display:inline-block">🎯 Seeking PhD opportunities in SLAM (2025)</div>
+        <h1>Hi, I’m Abderahmane — I love building systems that localize and map the world.</h1>
+        <p class="muted">Interested in visual SLAM, sensor fusion, and robust real‑time perception. This site collects my notes and blog posts as I learn and build.</p>
+        <div class="row">
+          <a class="btn primary" href="mailto:TODO_EMAIL">Email me</a>
+          <a class="btn" href="https://github.com/Abde951">GitHub</a>
+          <a class="btn" href="https://www.linkedin.com/in/abz11/">LinkedIn</a>
+        </div>
+      </div>
+      <img src="/assets/avatar.jpg" alt="Portrait of Abderahmane ZENTOUT">
+    </section>
+
+    <section id="about">
+      <h2>About</h2>
+      <div class="card">
+        <p>I’m currently exploring topics in Simultaneous Localization and Mapping (SLAM) and computer vision. My short‑term goal is to join a PhD program where I can work on visual‑inertial SLAM and real‑time mapping. On this site I’ll publish short write‑ups as I learn, implement, and experiment.</p>
+        <div class="row" style="margin-top:8px">
+          <div class="tags">
+            <span class="tag">C++</span>
+            <span class="tag">Python</span>
+            <span class="tag">ROS</span>
+            <span class="tag">OpenCV</span>
+            <span class="tag">PyTorch</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="blog">
+      <h2>Blog</h2>
+      <div class="list">
+        <!-- Replace these with your own posts. You can create /blog/*.html or use Jekyll later. -->
+        <article class="card">
+          <h3><a href="/blog/what-is-slam.html">What is SLAM? A friendly overview</a></h3>
+          <p class="muted">Draft • Add your first post in /blog/what-is-slam.html</p>
+        </article>
+        <article class="card">
+          <h3><a href="/blog/vio-pipeline-notes.html">Notes on a simple VIO pipeline</a></h3>
+          <p class="muted">Draft • Preintegration, tracking, and pose graphs</p>
+        </article>
+      </div>
+      <p class="muted" style="margin-top:8px">Tip: to add a new post, create a file under <code>/blog/</code> and link it here.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="card">
+        <p>Email: <a href="mailto:TODO_EMAIL">TODO_EMAIL</a></p>
+        <p>CV: <a href="/assets/CV.pdf">/assets/CV.pdf</a> (replace with your PDF)</p>
+        <p>Links: <a href="https://github.com/Abde951">GitHub</a> · <a href="https://www.linkedin.com/in/abz11/">LinkedIn</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <span class="muted">© <span id="year"></span> Abderahmane ZENTOUT</span>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
